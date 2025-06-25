@@ -2,7 +2,8 @@
 
 A React-based tool that calculates password entropy and estimates brute-force cracking time - all client-side for maximum privacy.
 
-![Demo Screenshot](https://via.placeholder.com/800x400?text=Password+Strength+Analyzer+Demo) *(replace with actual screenshot)*
+![Demo Screenshot](![image](https://github.com/user-attachments/assets/c8cba677-0ed7-49e5-a3e3-0da19f066a1d)
+)
 
 ## Features
 
