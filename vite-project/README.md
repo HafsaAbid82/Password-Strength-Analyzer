@@ -47,6 +47,3 @@ Limitations
 ⚠️ Estimates brute-force attacks only
 ⚠️ Doesn't account for dictionary attacks
 ⚠️ Accuracy depends on entropy thresholds
-License
-
-MIT © [Hafsa Abid]
