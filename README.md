@@ -29,8 +29,17 @@ A React-based tool that calculates password entropy and estimates brute-force cr
 
 ## 🚀 Quick Installation
 
-### 1. Copy-Paste Method (Easiest)
+### 1. Copy-Paste Method
 ```bash
 cd your-react-project/src/components
 curl -O https://raw.githubusercontent.com/HafsaAbid82/Password-Strength-Analyzer/main/Psa.jsx
 curl -O https://raw.githubusercontent.com/HafsaAbid82/Password-Strength-Analyzer/main/Psa.css
+```
+### 2. Developer Method
+```bash
+# Clone the project
+git clone https://github.com/HafsaAbid82/Password-Strength-Analyzer.git
+
+# Install as local dependency (optional)
+cd your-react-project
+npm install ../path-to-cloned-folder
