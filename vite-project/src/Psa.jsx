@@ -3,23 +3,23 @@ import './Psa.css';
 
 const Psa = () => {
   const [password, setPassword] = useState("");
-  
 
-  const calculateCharsetSize = (password) => { 
+
+  const calculateCharsetSize = (password) => {
     let size = 0;
-    if (password.match(/[a-z]/)) size += 26; 
-    if (password.match(/[A-Z]/)) size += 26;  
-    if (password.match(/[0-9]/)) size += 10;  
-    if (password.match(/[^a-zA-Z0-9]/)) size += 32;  
+    if (password.match(/[a-z]/)) size += 26;
+    if (password.match(/[A-Z]/)) size += 26;
+    if (password.match(/[0-9]/)) size += 10;
+    if (password.match(/[^a-zA-Z0-9]/)) size += 32;
     return size;
   };
 
 
-  const calculateEntropy = (charsetSize, length) => 
-    charsetSize > 0 && length > 0 ?  (length * Math.log2(charsetSize)) : 0;
+  const calculateEntropy = (charsetSize, length) =>
+    charsetSize > 0 && length > 0 ? (length * Math.log2(charsetSize)) : 0;
 
   const charsetSize = calculateCharsetSize(password);
-  const entropy = calculateEntropy(charsetSize, password.length ).toFixed(1);
+  const entropy = calculateEntropy(charsetSize, password.length).toFixed(1);
   const crackTime = estimateCrackTime(entropy);
 
   function estimateCrackTime(entropy) {
@@ -32,32 +32,32 @@ const Psa = () => {
 
   return (
     <div className="block">
-      <h1>Password strength analyser</h1>
+      <h1>Password Strength Analyser</h1>
       <p>Discover the strength of your password with this client-side-only password strength analyser and crack time estimation tool..</p>
-      
-      <input 
-        type="password" 
-        placeholder="Enter a password..." 
+
+      <input
+        type="password"
+        placeholder="Enter a password..."
         value={password}
         onChange={(e) => setPassword(e.target.value)}
-        className='block_input' 
+        className='block_input'
       />
-      
+
       <div className="card">
         <p>Duration to crack this password with brute force:</p>
         <h2>{crackTime}</h2>
       </div>
-      
+
       <div className="card">
         <p>Password length: {password.length}</p>
-         <p>Entropy: {entropy} bits </p>
+        <p>Entropy: {entropy} bits </p>
         <p>Character set size: {charsetSize} </p>
         <p>Score: {entropy}/100 </p>
       </div>
-      
+
       <div className="note">
         <span>Note: </span>
-        The computed strength is based on the time it would take to crack the password using a brute force approach, 
+        The computed strength is based on the time it would take to crack the password using a brute force approach,
         it does not take into account the possibility of a dictionary attack.
       </div>
     </div>

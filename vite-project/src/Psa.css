@@ -1,26 +1,96 @@
-#root{
-    margin: 0 auto;
+#root {
+    margin: 0;
+    width: 1880px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #030900, #575858, #001101);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.block{
-    background-color: black;
-    color:  white;
+
+/* Container */
+.block {
+    background: rgba(0, 0, 0, 0.8);
+    width: 500px;
+    color: #f1f1f1;
     font-size: 16px;
-    font-family: 'Times New Roman', Times, serif;
-    padding: 20px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
     text-align: center;
-    width:800px;
+    animation: fadeIn 0.8s ease-in-out;
 }
-.card{
-    background-color: var(--51386d66);
-    border: 1px solid var(--1d9c24b0);
-   margin: 5px;
-   padding: 20px;
+
+.block h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #00d084;
 }
-.block_input{
-    display: inline-flex;
-    flex-direction: column;
-    width: 80%;
-    text-size-adjust: 100%;
-    line-height: 2;
-    box-sizing: border-box ;
+
+.block p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #ddd;
+    line-height: 1.5;
+}
+
+/* Input */
+.block_input {
+    width: 400px;
+    padding: 12px;
+    margin-bottom: 20px;
+    margin-right: -8px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background: #1e1e1e;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.block_input:focus {
+    border: 1px solid #00d084;
+    box-shadow: 0px 0px 8px rgba(0, 208, 132, 0.6);
+}
+
+/* Card sections */
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.card h2 {
+    margin-top: 10px;
+    color: #00d084;
+}
+
+/* Note */
+.note {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.note span {
+    font-weight: bold;
+    color: #ff9800;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
